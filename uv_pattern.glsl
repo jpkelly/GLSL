@@ -8,15 +8,12 @@ uniform float iTime;
 uniform vec2 iResolution;
 uniform sampler2D sTD2DInputs[1];
 
-// Input from vertex shader
-in vec2 vUV;
-
 // Output color
 out vec4 fragColor;
 
 void main() {
     // Get UV coordinates (0.0 to 1.0)
-    vec2 uv = vUV;
+    vec2 uv = gl_FragCoord.xy / iResolution.xy;
     
     // Create a grid pattern
     float gridSize = 8.0; // Number of grid divisions

@@ -4,11 +4,11 @@
 uniform vec2 uTD2DInfos[1];
 uniform float uTime;
 
-in vec2 vUV;
 out vec4 fragColor;
 
 void main() {
-    vec2 uv = vUV.st;
+    // Get UV coordinates from TouchDesigner's automatic provision
+    vec2 uv = gl_FragCoord.xy / uTD2DInfos[0].xy;
     
     // Create numbered grid sections (8x8)
     float sections = 8.0;

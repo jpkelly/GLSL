@@ -26,6 +26,7 @@
 2. **Load Shaders**
    - **Vertex Shader**: Copy contents of `basic_vertex.glsl`
    - **Fragment Shader**: Copy contents of any UV pattern shader
+   - **Note**: Fragment shaders use TouchDesigner's automatic UV provision
 
 3. **Apply to Geometry**
    - Connect the material to any geometry with UV coordinates
@@ -76,3 +77,4 @@ In the GLSL TOP/MAT parameters:
 2. **Incorrect Scale**: Adjust grid size parameter
 3. **No Grid Lines**: Increase line width parameter
 4. **Color Issues**: Verify color space settings in TouchDesigner
+5. **vUV Redefinition Error**: Fragment shaders now use TouchDesigner's automatic UV provision to avoid conflicts
